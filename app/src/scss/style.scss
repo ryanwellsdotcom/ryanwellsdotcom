@@ -1,0 +1,165 @@
+$lightGray: #ddd;
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  letter-spacing: 3px;
+  color: $lightGray;
+  background-image: linear-gradient(
+    180deg,
+    #2b569b 0%,
+    #3e826e 100%,
+    #559b4d 100%
+  );
+}
+
+.container {
+  position: fixed;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.masthead {
+  font-size: 0.65rem;
+
+  &__title {
+    display: flex;
+    margin-bottom: 7px;
+    padding: 0 3px;
+    white-space: nowrap;
+    font-weight: 300;
+
+    &:after {
+      content: '_';
+      color: $lightGray;
+      //color: #2f496a;
+      animation: 1s blink step-end infinite;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  min-width: 217px;
+  justify-content: space-around;
+  animation: 0.7s focus ease-in-out;
+
+  &__item {
+    margin: 0 2px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    svg {
+      fill: $lightGray;
+      transform: scale(1);
+      transition: all 0.3s ease-out;
+
+      // safari 10.1+ hack to prevent will-change from blurring the svg files in chrome
+      @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) {
+          will-change: transform;
+        }
+      }
+
+      &:hover {
+        fill: #fff;
+        transform: scale(1.2);
+        transition: all 0.12s ease-in-out;
+        will-change: transform;
+      }
+    }
+
+    a {
+      display: block;
+      margin: 0;
+      padding: 3px 3px 0 3px;
+
+      &:focus {
+        outline: 1px dashed #fff;
+      }
+    }
+
+    &:nth-child(1) {
+      animation: 0.6s 0.5s bounce ease-in-out;
+    }
+
+    &:nth-child(2) {
+      animation: 0.55s 0.57s bounce ease-in-out;
+    }
+
+    &:nth-child(3) {
+      animation: 0.5s 0.64s bounce ease-in-out;
+    }
+
+    &:nth-child(4) {
+      animation: 0.45s 0.71s bounce ease-in-out;
+    }
+
+    &:nth-child(5) {
+      animation: 0.4s 0.78s bounce ease-in-out;
+    }
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 0;
+    //color: transparent;
+  }
+
+  50% {
+    opacity: 1;
+    //color: #2f496a;
+  }
+}
+
+@keyframes focus {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes bounce {
+  from,
+  to {
+    transform: translateY(0);
+    //transform: scale(1);
+  }
+
+  30% {
+    transform: translateY(-10px);
+    //transform: scale(1.4);
+  }
+
+  60% {
+    transform: translateY(0);
+    //transform: scale(1);
+  }
+
+  80% {
+    transform: translateY(-3px);
+    //transform: scale(1.1);
+  }
+}
