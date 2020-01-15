@@ -1,6 +1,6 @@
 # ryanwellsdotcom
 
-Personal websites for [Ryan Wells](https://ryanwells.com), UXD, front-end developer.
+Personal website for [Ryan Wells](https://ryanwells.com).
 
 ## Server Environments
 
