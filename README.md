@@ -7,7 +7,7 @@ Personal website for [Ryan Wells](https://ryanwells.com).
 Gulp has been added for task automation. To set up the environment, run:
 
 ```sh
-$ npm install
+$ npm ci
 ```
 
 ### Production
@@ -29,19 +29,18 @@ $ gulp prod
 The production build command regenerates the following structure:
 
 ```
-front-end-developer-exercise
+ryanwellsdotcom
 └── app
     └── build
         └── prod
-            ├── baby-steps.json
-            │   └──  dist
-            │        ├── css
-            │        │   ├── style.css
-            │        │   └── maps
-            │        ├── img
-            │        └── js
-            │            ├── main.js
-            │            └── maps
+            ├──  dist
+            │    ├── css
+            │    │   ├── style.css
+            │    │   └── maps
+            │    ├── img
+            │    └── js
+            │        ├── main.js
+            │        └── maps
             └── index.html
 ```
 
@@ -62,26 +61,25 @@ $ gulp dev
 Running the development build command or making changes to the source files while the development server is running regenerates the following structure:
 
 ```
-front-end-developer-exercise
+ryanwellsdotcom
 └── app
     └── build
         └── dev
-            ├── baby-steps.json
-            │   └──  dist
-            │        ├── css
-            │        │   ├── style.css
-            │        │   └── maps
-            │        ├── img
-            │        └── js
-            │            ├── main.js
-            │            └── maps
+            ├──  dist
+            │    ├── css
+            │    │   ├── style.css
+            │    │   └── maps
+            │    ├── img
+            │    └── js
+            │        ├── main.js
+            │        └── maps
             └── index.html
 ```
 
 Changes to files should be made from within the /src/ directory:
 
 ```
-front-end-developer-exercise
+ryanwellsdotcom
 └── src
     ├── css
     │   └── style.css
